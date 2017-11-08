@@ -9,26 +9,32 @@ PATH=$PATH:~/.cabal/bin:~/.xmonad/bin
 
 # Configure X
 xsetroot -cursor_name left_ptr &
-xrdb -merge ~/.Xdefaults &
-setxkbmap -option "ctrl:nocaps" &
+#xrdb -merge ~/.Xresources
+# setxkbmap -option "ctrl:nocaps" &
+setxkbmap -option terminate:ctrl_alt_bksp -option compose:menu dvorak
+
+# use Xmodmap to change keymappings (get rid of capslock and use escape instead)
+xmodmap .Xmodmap
+
 
 # Start a window compositor. This ensures Google Chrome paints correctly.
-xcompmgr -n &
+#xcompmgr -n &
 
 # Start the system tray
-tray &
+#tray &
 
 # Start two terminals
 gnome-terminal &
 gnome-terminal &
 
 # Start a browser
-google-chrome &
+#google-chrome &
 
 # Start screensaver
-gnome-screensaver &
+#gnome-screensaver &
 
 # Start sound server
-pulseaudio --start --log-target=syslog &
+#pulseaudio --start --log-target=syslog &
 
-gnome-session &
+#gnome-session &
+exec xmonad

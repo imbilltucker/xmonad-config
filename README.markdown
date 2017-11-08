@@ -1,5 +1,5 @@
 # xmonad-config
-xmonad-config is the [xmonad](http://xmonad.org/) configuration used by Vic Fryzel.
+this xmonad-config is the [xmonad](http://xmonad.org/) configuration leveraged from Vic Fryzel.
 
 
 ## Introduction
@@ -74,6 +74,11 @@ here are some instructions for some common login managers.
     ln -s ~/.xmonad/bin/xsession ~/.xinitrc
     # Logout, login from slim
 
+### xsession 
+
+    Seems like there should be using not .xsession but .xsessionrc
+    Debug your sessions with xsession-errors file.
+    When desparate, kill xsession: ps auxf | grep X and kill <PID> associated with X11.
 
 ## Keyboard shortcuts
 
